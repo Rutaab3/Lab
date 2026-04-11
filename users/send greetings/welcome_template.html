@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Lab Automation</title>
+</head>
+
+<body
+    style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f4f8; color: #1e293b;">
+
+    <!-- Container -->
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f0f4f8; padding: 40px 0;">
+        <tr>
+            <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0"
+                    style="background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+
+                    <!-- Hero Image -->
+                    <tr>
+                        <td style="background-color: #1e293b;">
+                            <img src="cid:hero_image" alt="Welcome to Lab Automation"
+                                style="width: 100%; height: auto; display: block; max-height: 250px; object-fit: cover; opacity: 0.9;">
+                        </td>
+                    </tr>
+
+                    <!-- Header with Logo -->
+                    <tr>
+                        <td style="padding: 40px 40px 10px; text-align: center;">
+                            <img src="cid:logo_image" alt="Lab Automation Logo"
+                                style="height: 60px; width: auto; margin-bottom: 15px;">
+                            <h1 style="margin: 0; color: #6366f1; font-size: 26px; font-weight: 700;">Welcome to Lab
+                                Automation!</h1>
+                        </td>
+                    </tr>
+
+                    <!-- Greeting & Message -->
+                    <tr>
+                        <td
+                            style="padding: 20px 50px 30px; color: #64748b; font-size: 16px; line-height: 26px; text-align: center;">
+                            <p style="margin: 0 0 15px; color: #1e293b; font-weight: 600; font-size: 18px;">Hello,
+                                {{USERNAME}}! 👋</p>
+                            <p style="margin: 0 0 15px;">We are thrilled to have you onboard. <strong>Lab
+                                    Automation</strong> is your all-in-one solution for efficient laboratory management,
+                                product tracking, and collaborative quality testing.</p>
+                            <p style="margin: 0;">You've taken the first step towards a smarter, more streamlined
+                                workflow.</p>
+                        </td>
+                    </tr>
+
+                    <!-- Account Details Box -->
+                    <tr>
+                        <td style="padding: 0 50px 30px;">
+                            <div
+                                style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 25px;">
+                                <h3
+                                    style="margin: 0 0 20px; color: #4f46e5; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px;">
+                                    Your Profile Details</h3>
+                                <table width="100%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td style="padding: 8px 0; color: #64748b; font-size: 14px;">
+                                            <strong>Username:</strong></td>
+                                        <td
+                                            style="padding: 8px 0; color: #1e293b; font-size: 14px; font-weight: 600; text-align: right;">
+                                            {{USERNAME}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px 0; color: #64748b; font-size: 14px;">
+                                            <strong>Email:</strong></td>
+                                        <td
+                                            style="padding: 8px 0; color: #1e293b; font-size: 14px; font-weight: 600; text-align: right;">
+                                            {{EMAIL}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px 0; color: #64748b; font-size: 14px;"><strong>Joined
+                                                On:</strong></td>
+                                        <td
+                                            style="padding: 8px 0; color: #1e293b; font-size: 14px; font-weight: 600; text-align: right;">
+                                            {{REGISTRATION_DATE}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- CTA Button -->
+                    <tr>
+                        <td align="center" style="padding: 0 50px 40px;">
+                            <a href="{{DASHBOARD_URL}}"
+                                style="display: inline-block; background-color: #6366f1; color: #ffffff; text-decoration: none; padding: 14px 40px; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 4px 6px rgba(99, 102, 241, 0.25); text-align: center;">
+                                Go to Dashboard
+                            </a>
+                            <p style="margin: 20px 0 0; font-size: 13px; color: #94a3b8;">
+                                Experience the future of lab management today.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #1e293b; color: #f1f5f9; padding: 30px 40px;">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center" style="padding-bottom: 20px; border-bottom: 1px solid #334155;">
+                                        <p style="margin: 0 0 10px; font-size: 14px; font-weight: 600;">Connect with us
+                                        </p>
+                                        <!-- Social Icons (Using images or styled text since external fonts/icons might be blocked) -->
+                                        <a href="https://google.com"
+                                            style="text-decoration: none; margin: 0 8px; color: #cbd5e1; font-size: 20px;">G</a>
+                                        <a href="https://facebook.com"
+                                            style="text-decoration: none; margin: 0 8px; color: #cbd5e1; font-size: 20px;">f</a>
+                                        <a href="https://github.com"
+                                            style="text-decoration: none; margin: 0 8px; color: #cbd5e1; font-size: 20px;">Git</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center"
+                                        style="padding-top: 20px; font-size: 12px; color: #94a3b8; line-height: 1.6;">
+                                        <p style="margin: 0;">&copy; 2025 Lab Automation System. All rights reserved.
+                                        </p>
+                                        <p style="margin: 5px 0 0;">You received this email because you signed up on our
+                                            platform.</p>
+                                        <p style="margin: 10px 0 0;">
+                                            <a href="#" style="color: #6366f1; text-decoration: none;">Privacy
+                                                Policy</a> &bull;
+                                            <a href="#" style="color: #6366f1; text-decoration: none;">Terms of
+                                                Service</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

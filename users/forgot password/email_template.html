@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset OTP</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4;">
+    
+    <!-- Container -->
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4; padding: 20px 0;">
+        <tr>
+            <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    
+                    <!-- Hero Image -->
+                    <tr>
+                        <td>
+                            <img src="../images/logo22.png" alt="Lab Automation" style="width: 100%; height: auto; display: block;">
+                        </td>
+                    </tr>
+                    
+                    <!-- Greeting -->
+                    <tr>
+                        <td style="padding: 30px 40px 10px;">
+                            <h1 style="margin: 0; color: #000000; font-size: 28px; font-weight: 600;">Hi {{USERNAME}},</h1>
+                        </td>
+                    </tr>
+                    
+                    <!-- Description -->
+                    <tr>
+                        <td style="padding: 10px 40px 20px; color: #555555; font-size: 15px; line-height: 24px;">
+                            <p style="margin: 0 0 15px;">Welcome to Lab Automation, your trusted partner in laboratory management and quality testing solutions.</p>
+                            <p style="margin: 0 0 15px;">We provide comprehensive tools for managing products, test reports, and team collaboration efficiently.</p>
+                            <p style="margin: 0;">Our platform ensures seamless workflows for testers, analysts, suppliers, and administrators.</p>
+                        </td>
+                    </tr>
+                    
+                    <!-- OTP Box -->
+                    <tr>
+                        <td style="padding: 0 40px 30px;">
+                            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f8f8; border-radius: 6px; border-left: 4px solid #000000;">
+                                <tr>
+                                    <td style="padding: 25px;">
+                                        <!-- Logo and Company Name -->
+                                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 20px;">
+                                            <tr>
+                                                <td align="right">
+                                                    <img src="../images/logo.png" alt="Lab Automation Logo" style="height: 40px; width: auto; vertical-align: middle; margin-right: 10px;">
+                                                    <span style="font-size: 18px; font-weight: 600; color: #000000; vertical-align: middle;">Lab Automation</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <!-- Message -->
+                                        <p style="margin: 0 0 20px; color: #333333; font-size: 15px; line-height: 22px;">
+                                            You requested to reset your password. Use the verification code below to proceed:
+                                        </p>
+                                        
+                                        <!-- OTP Code -->
+                                        <div style="background-color: #ffffff; border: 2px dashed #cccccc; border-radius: 4px; padding: 20px; text-align: center; margin: 20px 0;">
+                                            <p style="margin: 0 0 5px; color: #888888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Your OTP Code</p>
+                                            <p style="margin: 0; font-size: 32px; font-weight: 700; color: #000000; letter-spacing: 8px; font-family: 'Courier New', monospace;">{{OTP_CODE}}</p>
+                                        </div>
+                                        
+                                        <p style="margin: 20px 0 0; color: #666666; font-size: 13px;">
+                                            This code will expire in <strong>15 minutes</strong>. If you didn't request this, please ignore this email.
+                                        </p>
+                                        
+                                        <!-- Reference ID -->
+                                        <p style="margin: 15px 0 0; color: #999999; font-size: 11px; font-family: 'Courier New', monospace;">
+                                            REF: {{REFERENCE_ID}}
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Social Links -->
+                    <tr>
+                        <td style="padding: 20px 40px; border-top: 1px solid #eeeeee;">
+                            <p style="margin: 0 0 15px; color: #666666; font-size: 14px; text-align: center;">Connect with us:</p>
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center">
+                                        <!-- Google -->
+                                        <a href="https://google.com" style="display: inline-block; margin: 0 10px; text-decoration: none;">
+                                            <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">
+                                                <span style="color: #ffffff; font-size: 18px;">G</span>
+                                            </div>
+                                        </a>
+                                        
+                                        <!-- Facebook -->
+                                        <a href="https://facebook.com" style="display: inline-block; margin: 0 10px; text-decoration: none;">
+                                            <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">
+                                                <span style="color: #ffffff; font-size: 18px;">f</span>
+                                            </div>
+                                        </a>
+                                        
+                                        <!-- GitHub -->
+                                        <a href="https://github.com" style="display: inline-block; margin: 0 10px; text-decoration: none;">
+                                            <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">
+                                                <span style="color: #ffffff; font-size: 18px;">⚙</span>
+                                            </div>
+                                        </a>
+                                        
+                                        <!-- Apple -->
+                                        <a href="https://apple.com" style="display: inline-block; margin: 0 10px; text-decoration: none;">
+                                            <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">
+                                                <span style="color: #ffffff; font-size: 18px;">🍎</span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #000000; color: #ffffff; padding: 30px 40px;">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <h3 style="margin: 0 0 15px; font-size: 18px; font-weight: 600;">Lab Automation</h3>
+                                        <p style="margin: 0 0 10px; font-size: 13px; color: #cccccc; line-height: 20px;">
+                                            Your comprehensive laboratory management solution for quality testing, product tracking, and team collaboration.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-top: 15px; border-top: 1px solid #333333; margin-top: 15px;">
+                                        <table width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="50%" style="font-size: 12px; color: #aaaaaa;">
+                                                    <p style="margin: 0 0 5px;"><strong>Contact Us</strong></p>
+                                                    <p style="margin: 0;">Email: support@labautomation.com</p>
+                                                    <p style="margin: 0;">Phone: +1 (555) 123-4567</p>
+                                                </td>
+                                                <td width="50%" align="right" style="font-size: 12px; color: #aaaaaa;">
+                                                    <p style="margin: 0 0 5px;"><strong>Quick Links</strong></p>
+                                                    <p style="margin: 0;"><a href="#" style="color: #aaaaaa; text-decoration: none;">Privacy Policy</a></p>
+                                                    <p style="margin: 0;"><a href="#" style="color: #aaaaaa; text-decoration: none;">Terms of Service</a></p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-top: 20px; text-align: center; font-size: 11px; color: #888888;">
+                                        <p style="margin: 0;">© 2025 Lab Automation. All rights reserved.</p>
+                                        <p style="margin: 5px 0 0;">This is an automated message. Please do not reply to this email.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>

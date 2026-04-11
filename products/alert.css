@@ -1,0 +1,71 @@
+/* Custom SweetAlert2 Styles for Users Module */
+
+/* Confirm Alert - Light Yellow Background with Yellow Left Border */
+.swal2-popup.swal2-confirm {
+    background-color: #fffbeb !important; /* light yellow */
+    border-left: 4px solid #fbbf24 !important; /* yellow border */
+}
+
+.swal2-popup.swal2-confirm .swal2-title {
+    color: #92400e;
+}
+
+.swal2-popup.swal2-confirm .swal2-html-container {
+    color: #78350f;
+}
+
+/* Success Alert - Light Green Background with Green Left Border */
+.swal2-popup.swal2-success {
+    background-color: #ecfdf5 !important; /* light green */
+    border-left: 4px solid #10b981 !important; /* green border */
+}
+
+.swal2-popup.swal2-success .swal2-title {
+    color: #065f46;
+}
+
+.swal2-popup.swal2-success .swal2-html-container {
+    color: #047857;
+}
+
+/* Error Alert - Light Red Background with Red Left Border */
+.swal2-popup.swal2-error {
+    background-color: #fef2f2 !important; /* light red */
+    border-left: 4px solid #ef4444 !important; /* red border */
+}
+
+.swal2-popup.swal2-error .swal2-title {
+    color: #991b1b;
+}
+
+.swal2-popup.swal2-error .swal2-html-container {
+    color: #b91c1c;
+}
+
+/* General Popup Styling */
+.swal2-popup {
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+/* Confirm Button Styling */
+.swal2-confirm {
+    background-color: #6366f1 !important;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* .swal2-confirm:hover {
+    background-color: #4f46e5 !important;
+} */
+
+/* Cancel Button Styling */
+.swal2-cancel {
+    background-color: #fd0000 !important;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+}

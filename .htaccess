@@ -1,0 +1,8 @@
+ErrorDocument 400 /lab/404.php
+ErrorDocument 401 /lab/404.php
+ErrorDocument 403 /lab/404.php
+ErrorDocument 404 /lab/404.php
+ErrorDocument 500 /lab/404.php
+
+
+

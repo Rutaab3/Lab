@@ -1,0 +1,15 @@
+[submodule "library-repos/bootstrap"]
+	path = library-repos/bootstrap
+	url = https://github.com/twbs/bootstrap.git
+[submodule "library-repos/bootstrap-icons"]
+	path = library-repos/bootstrap-icons
+	url = https://github.com/twbs/icons.git
+[submodule "library-repos/GSAP"]
+	path = library-repos/GSAP
+	url = https://github.com/greensock/GSAP.git
+[submodule "library-repos/Just-validate"]
+	path = library-repos/Just-validate
+	url = https://github.com/horprogs/Just-validate.git
+[submodule "library-repos/sweetalert2"]
+	path = library-repos/sweetalert2
+	url = https://github.com/sweetalert2/sweetalert2.git

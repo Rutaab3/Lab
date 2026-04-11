@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Internal Portal Landing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#111827", // Dark gray/black from the SmartBank brand
+                        secondary: "#7C3AED", // Purple accent seen in icons
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#1F2937",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#374151",
+                        "subtle-light": "#F3F4F6",
+                        "subtle-dark": "#4B5563",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Inter', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': "1rem",
+                        '2xl': "1.5rem",
+                        '3xl': "2rem",
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'glow': '0 0 40px -10px rgba(124, 58, 237, 0.3)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #111827, #4B5563);
+        }
+        .dark .gradient-text {
+             background-image: linear-gradient(to right, #F9FAFB, #9CA3AF);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 font-sans antialiased transition-colors duration-300">
+<nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-surface-light/80 dark:bg-background-dark/80 glass-effect border-b border-gray-100 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+<span class="material-icons-outlined text-3xl text-gray-900 dark:text-white">account_balance</span>
+<span class="font-bold text-xl tracking-tight text-gray-900 dark:text-white">SmartBank</span>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition" href="#">Home</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition" href="#">Features</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition" href="#">How It Works</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition" href="#">Pricing</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition" href="#">FAQs</a>
+</div>
+<div class="hidden md:flex items-center">
+<a class="px-5 py-2.5 rounded-full border border-gray-200 dark:border-gray-700 text-sm font-medium text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition" href="#">
+                        Get the App
+                    </a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 focus:outline-none">
+<span class="material-icons-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<div class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-subtle-light dark:bg-gray-900/50">
+<div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+<div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-purple-200/30 dark:bg-purple-900/10 blur-[100px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-blue-100/30 dark:bg-blue-900/10 blur-[100px]"></div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 shadow-sm">
+<span class="text-sm font-medium text-gray-600 dark:text-gray-300">Sign up now and get $5 instantly</span>
+<span class="material-icons-outlined text-sm text-gray-400">arrow_forward</span>
+</div>
+<h1 class="text-4xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.15]">
+                        Your Money, Managed Effortlessly for Daily Savings and Growth
+                    </h1>
+<p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto lg:mx-0">
+                        Build better saving habits with quick deposits, smart goals, and total control over your money all in one simple app.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<a class="px-8 py-3.5 rounded-xl bg-primary text-white font-medium hover:opacity-90 transition shadow-lg flex items-center justify-center gap-2" href="#">
+                            Get Started <span class="material-icons-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative lg:h-[600px] flex items-center justify-center lg:justify-end">
+<div class="relative w-[280px] z-10 transform lg:-translate-x-10 lg:translate-y-10 shadow-2xl rounded-[3rem] border-[8px] border-white dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden">
+<img alt="App Dashboard UI" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4xLVvwwd8wfr1yZWjyaeAtCoNtkDY2CNrPy4cd8yIpInkt6Q9EmAoYM7yDEeDQmoPVZXrLUPt8EnRpRvNtZGn1mb3KLa_oWNYbyj1jJFdeUYrnzUtaRJIGlvihgAwIUu4L4pt6kZVbppylvp7xeH6aPg4A1nTlxPonn6t1kBquei0TWOdUbts6cRd65FCnCbjhKAuGhNMRjCMGu9_STxnNddVVHAkRFBh-Csfih81OhdAirzz8C-ItfO5d6ZJ_nvPkiqUfo4f9Jw"/>
+</div>
+<div class="hidden lg:block absolute w-[260px] top-10 right-0 z-0 transform translate-x-4 shadow-xl rounded-[3rem] border-[8px] border-white dark:border-gray-800 bg-gray-50 dark:bg-gray-800 overflow-hidden opacity-90 scale-95">
+<img alt="App Settings UI" class="w-full h-auto object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAleJqwyuFKjh4BHlGeE6P4u3pFZjq7ivhL-3gm8ISg_enU8difEie3jN1Lu6bfD52watkrfDdQCgQX-FT1ZvdLJSi26Re5u3Sa2ia131IJqJSE-_ziAsFUOJcJHKRr9st35kCgPKKu6GrVoU7zYkz1gqr51aU3ZVAkJJKFdv5TVos0NsFdjQwUKo9ZSJ4szdXcjrKv0J_Bdnz-2Bfxx8kjwnlYgi0tdmHE3FV4kafGBbd1h3SBV1nqzXYMAsqrQ-hmo2MaebUO_cY"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="py-24 bg-surface-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">How It Works</h2>
+<p class="text-gray-600 dark:text-gray-400">Our saving process is designed to be fast, secure, and intuitive. Here's how SmartBank keeps you in control.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-12 text-center relative">
+<div class="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gray-100 dark:bg-gray-800 -z-10"></div>
+<div class="flex flex-col items-center group">
+<div class="w-24 h-24 rounded-2xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center mb-6 transition-transform group-hover:scale-110 duration-300 shadow-glow">
+<span class="material-icons-outlined text-4xl text-purple-600 dark:text-purple-400">person_add</span>
+</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Create Your Account</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm max-w-xs">Sign up fast with your email or phone number. No long forms - just a smooth start.</p>
+</div>
+<div class="flex flex-col items-center group">
+<div class="w-24 h-24 rounded-2xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center mb-6 transition-transform group-hover:scale-110 duration-300 shadow-glow">
+<span class="material-icons-outlined text-4xl text-purple-600 dark:text-purple-400">account_balance_wallet</span>
+</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Fund Your Wallet</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm max-w-xs">Add money through bank transfer or card. Your funds land instantly so you can start saving right away.</p>
+</div>
+<div class="flex flex-col items-center group">
+<div class="w-24 h-24 rounded-2xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center mb-6 transition-transform group-hover:scale-110 duration-300 shadow-glow">
+<span class="material-icons-outlined text-4xl text-purple-600 dark:text-purple-400">savings</span>
+</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Start Saving Smart</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm max-w-xs">Create goals, automate deposits, or use quick save whenever you're ready. Watch your balance grow effortlessly.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-subtle-light dark:bg-surface-dark/30">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Powerful features for everyday saving that works</h2>
+<p class="text-gray-600 dark:text-gray-400">SmartBank gives you the right tools to save consistently, stay disciplined, and track your progress with clarity - all in one simple app.</p>
+</div>
+<div class="space-y-12">
+<div class="bg-white dark:bg-surface-dark rounded-3xl p-8 md:p-12 shadow-soft hover:shadow-lg transition-shadow duration-300">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="flex justify-center md:justify-start order-2 md:order-1">
+<div class="relative w-[240px] shadow-2xl rounded-[2.5rem] border-[6px] border-gray-100 dark:border-gray-700 overflow-hidden bg-gray-50">
+<img alt="Smart Savings Feature UI" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjY1QB3OCLEum5CzawHpwBRfk12gbycQTaafP0chIqJ02eMuogXCgiZ-U6m3KSZ3rBHRDf_X0tFTLn2HqwtnuOBeQhZ6FgFXP9tRCOwo2Aa513i5iR2yiAwdIeb5dQXpBJfldzgfY6DBR_WhRpsDUTurqqEEiUIwwM9qzwgKfemPlt6ardRHkwhLOiFzaNDmHxKBR3ow4r-0cftAHDIZWDC8A0uYYnHAKrM0Ec6V0nQyqST70GoQwKZAmvdQngtZrcOU0xEm7_a5U"/>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-md text-xs font-semibold tracking-wide uppercase mb-4">Our Features</span>
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Smart Savings</h3>
+<p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">Save automatically or whenever you want. Small or large amounts, you're always in control of how you save. Set recurring transfers and forget about it.</p>
+<button class="px-6 py-2.5 bg-primary text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition">See Details →</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-3xl p-8 md:p-12 shadow-soft hover:shadow-lg transition-shadow duration-300">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="order-1">
+<span class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-md text-xs font-semibold tracking-wide uppercase mb-4">Our Features</span>
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Savings Goals</h3>
+<p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">Create goals for what matters to you. From vacations to rainy day funds, visualize your progress with dedicated buckets for each objective.</p>
+<button class="px-6 py-2.5 bg-primary text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition">See Details →</button>
+</div>
+<div class="flex justify-center md:justify-end order-2">
+<div class="relative w-[240px] shadow-2xl rounded-[2.5rem] border-[6px] border-gray-100 dark:border-gray-700 overflow-hidden bg-gray-50">
+<img alt="Savings Goals UI" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9GiCzqVNyU-QlGl3okbZfpm0LxBEBkbpmuUn_qIVHhLqV3EO3Ja33ANO29bksLSa1xm7apT7xyrUsz1PONXq3hI5H8hiTn9Qt4HSEffKayjIJ-9LCiX1WMwNfAQ2ftHqCS-EBTgtonTK4tB5nIkdH8M3Os3ZYZMnQpGU5mJwxX9k2PVVvUcmdmS9cljb93kaOAbnRrzasyLgwYXa0t1IXixwKM_oo6QO6kaqZVbdP--imZj0xr6fXYQhVKgGZBAMvzqxc4xRsl_k"/>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-3xl p-8 md:p-12 shadow-soft hover:shadow-lg transition-shadow duration-300">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="flex justify-center md:justify-start order-2 md:order-1">
+<div class="relative w-[240px] shadow-2xl rounded-[2.5rem] border-[6px] border-gray-100 dark:border-gray-700 overflow-hidden bg-gray-50">
+<img alt="Tracker UI" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc1GQfDva0qIqYYe4yrE78zE7Z4I-c7oogPiwWo948TmA0YTOtAP5A_d4KRYqlHoTiZLO7uhsOI9Z9Qj-F0nxtQkx_d5Yv01_F4y9li6W2zz4a-Xpqf-GzTWzm4D5ZjFNh-Hf1s_aRyxzP1S5eGKpZoEjRjDqGTqrPuWeOg07pI-VLWKQqy44not8IoP9x6yDo5iXYWWHFDxhXKisNnqPNnSl_KSj6tr7sTXHHI3VnyNmbWDZF3MuFkGVbDvCIKw-vJrgPFTBdJCE"/>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-md text-xs font-semibold tracking-wide uppercase mb-4">Our Features</span>
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Saving Goals Tracker</h3>
+<p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">Stay motivated with visual progress bars. Get notifications when you hit milestones and celebrate every win along the way.</p>
+<button class="px-6 py-2.5 bg-primary text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition">See Details →</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-surface-light dark:bg-background-dark overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">What Our Client Say</h2>
+<p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Don't just take our word for it. Hear from the people who use SmartBank daily to reach their financial peaks.</p>
+</div>
+<div class="flex gap-6 overflow-x-auto pb-8 hide-scrollbar snap-x">
+<div class="min-w-[320px] md:min-w-[380px] snap-center bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex text-yellow-400 mb-4">
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+</div>
+<p class="text-gray-600 dark:text-gray-300 italic mb-6">"SmartBank helps me having a saving ecosystem that makes growth rewarding and easy. I've saved more in 3 months than the last 3 years."</p>
+<div class="flex items-center gap-3">
+<img alt="User" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX8vhDhGOpBgFrEGpaXJV3B9M1HBqA3lcSGS9a3PX_Th8SC3Y_NQfR7EJAdKtAJF26mGjVDMBDrnOb7JOdY0tb60g0RtqlQZ4D1bmODhHYpcfksExWfaUo5r5gBuAUG7HFtKV5zqA4pPb76ZlFMpDXgU-fXF5IIr-VYqxqpiCg7jBtqd9KG6SV18e862aASdEnY-oVPrCswXiyJldmseahN92Q8f1xyUK_Lq2BkAhRVI_pbGCk_aLtNZk-7Wv-ndC9xYIv-SYliZc"/>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white text-sm">Sarah Mery</h4>
+<p class="text-xs text-gray-500">Designer</p>
+</div>
+</div>
+</div>
+<div class="min-w-[320px] md:min-w-[380px] snap-center bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex text-yellow-400 mb-4">
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+</div>
+<p class="text-gray-600 dark:text-gray-300 italic mb-6">"Excellent interface, the goal buckets are incredibly intuitive. The automation features mean I don't even have to think about saving."</p>
+<div class="flex items-center gap-3">
+<img alt="User" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuConU7A20R4KFneJb-fnwBDsd76HjF45CDAPGkDxzDvJfrMQndIAq0CCpAjzcPLVmO2o7chXWeaKjntE0SmfQC7AeVsUnxKtEi7Ms7bTGAdnwme4d0jgj1vA6zXwtxmx3y95TZxJ_cckyVQ6CuslIcxlmNL7-rIB5U-KCsc1wp0qM-qzL6coAOiX0Hkp6CZT1cSVeMJAGME2jgWugenpvgX9LyjLPzcDnq_aV8zL2tXD2FHPwEgC-1-xVNQ8C6R1JYkep-09lLh7ao"/>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white text-sm">David Hein</h4>
+<p class="text-xs text-gray-500">Engineer</p>
+</div>
+</div>
+</div>
+<div class="min-w-[320px] md:min-w-[380px] snap-center bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex text-yellow-400 mb-4">
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star_half</span>
+</div>
+<p class="text-gray-600 dark:text-gray-300 italic mb-6">"Better customer day... I struggled to save for years. The visual goals made all the difference for my vacation fund."</p>
+<div class="flex items-center gap-3">
+<img alt="User" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGOqR1GDcOQFb114ir0Q7x3JZTBg3UuMn3hBjzLGoz8GWQGlo5S0zjTjuYjqDHyvC9Z58ltcSag1EqvFXgjDG9VuLE5nuKnK8WgsYUst3rcGAkV5qqZSWyhN_muLwUnv4cjlSLcLzrRVyWtFQmtRJxuRGkoy2UE0fUdohepxcseX7MSyvBEqNPmQAkaVTYL7DicsN2jsGeUhzSHIuiJv1NgLxe4phV7SPf2r8xdx2r-zvUDchPe8dDdNi6U5wEzhpluRoJ-QWSr2Y"/>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white text-sm">James Tuff</h4>
+<p class="text-xs text-gray-500">Teacher</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-subtle-light dark:bg-surface-dark/20">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">General FAQs</h2>
+<p class="text-gray-500 dark:text-gray-400">Need help? Contact our support team.</p>
+</div>
+<div class="space-y-4">
+<div class="bg-white dark:bg-surface-dark rounded-xl p-6 shadow-sm cursor-pointer group hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+<div class="flex justify-between items-center">
+<h3 class="font-medium text-gray-900 dark:text-white">Can I withdraw my savings anytime?</h3>
+<span class="material-icons-outlined text-gray-400 group-hover:text-primary transition">add</span>
+</div>
+<p class="hidden mt-4 text-gray-600 dark:text-gray-400 text-sm">Yes! You maintain full control over your savings. Withdrawals are instant.</p>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-6 shadow-sm cursor-pointer group hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+<div class="flex justify-between items-center">
+<h3 class="font-medium text-gray-900 dark:text-white">Can I set multiple savings goals at the same time?</h3>
+<span class="material-icons-outlined text-gray-400 group-hover:text-primary transition">add</span>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-6 shadow-sm cursor-pointer group hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+<div class="flex justify-between items-center">
+<h3 class="font-medium text-gray-900 dark:text-white">How does quick save work?</h3>
+<span class="material-icons-outlined text-gray-400 group-hover:text-primary transition">add</span>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-6 shadow-sm cursor-pointer group hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+<div class="flex justify-between items-center">
+<h3 class="font-medium text-gray-900 dark:text-white">Are there any hidden charges?</h3>
+<span class="material-icons-outlined text-gray-400 group-hover:text-primary transition">add</span>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-6 shadow-sm cursor-pointer group hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+<div class="flex justify-between items-center">
+<h3 class="font-medium text-gray-900 dark:text-white">Can I track shared expenses with my partner?</h3>
+<span class="material-icons-outlined text-gray-400 group-hover:text-primary transition">add</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white relative overflow-hidden mt-12 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+<div>
+<h2 class="text-3xl lg:text-4xl font-bold mb-6">Maximize your wealth and reach new financial peaks</h2>
+<p class="text-gray-400 mb-8 max-w-md">Join thousands of users who are already building a secure financial future with SmartBank.</p>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 border border-gray-700 px-4 py-2 rounded-lg transition">
+<span class="material-icons-outlined text-2xl">apple</span>
+<div class="text-left">
+<div class="text-[10px] uppercase text-gray-400 leading-none">Download on the</div>
+<div class="text-sm font-bold leading-none mt-1">App Store</div>
+</div>
+</button>
+<button class="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 border border-gray-700 px-4 py-2 rounded-lg transition">
+<span class="material-icons-outlined text-2xl">android</span>
+<div class="text-left">
+<div class="text-[10px] uppercase text-gray-400 leading-none">Get it on</div>
+<div class="text-sm font-bold leading-none mt-1">Google Play</div>
+</div>
+</button>
+</div>
+</div>
+<div class="flex justify-center lg:justify-end">
+<div class="w-[240px] shadow-2xl rounded-[2.5rem] border-[4px] border-gray-700 bg-gray-800 overflow-hidden transform rotate-6 hover:rotate-0 transition duration-500">
+<img alt="App UI Dark Mode" class="w-full h-auto opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhat-szX1m8BX4JzLwwzYvjwOvioOaCWjzJQhv8CBc1wXUMyfYpVl3LKJqv7QPwTKo6BVp4Ao7yJowdDOmVXKq_o9J88UCa1cOtPhHWu-fN3Lzw6TISumGwnB_eL-AypMJuc-38_Wsxfn2u2ytAHmbsxCVDh7ak01df_RmJjzAUzxY8HMEi_mq0nfyxemWZR4SzJnDp8jUM86XGDAUl0uqUZqO1U3Cb99O1i3hI-hy-Bnply5GWde-U_zG2viTMZ88QhyTWTzjkcY"/>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-12">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+<div class="col-span-2 lg:col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-icons-outlined text-2xl text-white">account_balance</span>
+<span class="font-bold text-xl">SmartBank</span>
+</div>
+<p class="text-gray-500 text-sm max-w-xs">SmartBank Ltd. © Finance Ave. City. <br/>All rights reserved.</p>
+</div>
+<div>
+<h4 class="font-bold text-gray-300 mb-4">Company</h4>
+<ul class="space-y-2 text-sm text-gray-500">
+<li><a class="hover:text-white transition" href="#">About Us</a></li>
+<li><a class="hover:text-white transition" href="#">Careers</a></li>
+<li><a class="hover:text-white transition" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-300 mb-4">Product</h4>
+<ul class="space-y-2 text-sm text-gray-500">
+<li><a class="hover:text-white transition" href="#">Features</a></li>
+<li><a class="hover:text-white transition" href="#">Pricing</a></li>
+<li><a class="hover:text-white transition" href="#">Security</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-300 mb-4">Support</h4>
+<ul class="space-y-2 text-sm text-gray-500">
+<li><a class="hover:text-white transition" href="#">Help Center</a></li>
+<li><a class="hover:text-white transition" href="#">Contact Us</a></li>
+<li><a class="hover:text-white transition" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 gap-4">
+<div class="flex gap-4">
+<a class="hover:text-gray-400 transition" href="#">Privacy Policy</a>
+<a class="hover:text-gray-400 transition" href="#">Terms of Service</a>
+</div>
+<div class="flex gap-4">
+<span class="material-icons-outlined text-lg cursor-pointer hover:text-white transition">facebook</span>
+<span class="material-icons-outlined text-lg cursor-pointer hover:text-white transition">smart_display</span> 
+<span class="material-icons-outlined text-lg cursor-pointer hover:text-white transition">alternate_email</span> 
+</div>
+</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+</footer>
+
+</body></html>

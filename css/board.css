@@ -1,0 +1,465 @@
+
+/* Base Styles & Variables */
+:root {
+    /* Using colors inferred from the sidebar/dashboard context */
+    --primary-color: #6366f1; /* Indigo */
+    --primary-dark: #4f46e5;
+    --secondary-color: #f8fafc;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    /* Minimal transitions requested */
+    --transition: all 0.2s ease-out; 
+}
+
+body {
+  opacity: 0;
+    transition: var(--transition);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    /* Soft, light gradient for a modern dashboard feel */
+    background-color: #f0f4f8; /* Light background */
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: var(--text-dark);
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Main Layout --- */
+#content {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 250px; /* Space for the default sidebar width */
+    transition: var(--transition);
+}
+
+/* This class should be applied to #content when the sidebar is collapsed (via JavaScript) */
+#content.toggled {
+    padding-left: 0px; /* Reduced space for collapsed sidebar */
+}
+
+/* --- Sidebar Styling --- */
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1030; /* Above regular content but below modal backdrops */
+    background: linear-gradient(180deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    overflow-y: auto; /* Enable scrolling for long menus */
+        overflow-x: hidden !important; /* Enable scrolling for long menus */
+
+
+}
+
+/* This class should be applied to #sidebar when it's collapsed (via JavaScript) */
+#sidebar.toggled {
+    margin-left: -2000px; /* Hides most of the sidebar, leaves 80px visible (250 - 170) */
+border-top-right-radius: 30px;
+border-bottom-right-radius: 30px;
+
+
+}
+
+.sidebar-header {
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+    text-align: center;
+}
+
+.sidebar-header h3 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.list-unstyled.components {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.list-unstyled.components li a {
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    transition: var(--transition);
+}
+
+.list-unstyled.components li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateX(0px) !important;
+}
+
+ul ul a {
+    padding-left: 40px !important;
+    font-size: 0.9em !important;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Admin Badge */
+/* .profile {
+     position: absolute;
+    bottom: 0 !important; 
+     width: 100%;
+    padding: 4px; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.profile img{
+    border: none !important;
+} */
+
+
+.admin-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    /* margin-right: 10px; */
+    border: 2px solid white;
+}
+
+.admin-name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* --- Navbar in Content Area --- */
+#content .navbar {
+    padding: 15px 20px;
+    background: white;
+    box-shadow: var(--shadow);
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.btn-toggle {
+  background: #f1f5f9;
+  color: var(--text-dark);
+  border: none;
+  padding: 0.2rem 0.5rem !important;
+  transition: var(--transition);
+}
+.btn-toggle:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* --- Stat Cards --- */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 0px !important;
+    transition: var(--transition);
+}
+
+.card-header, thead tr{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.card-green {
+    background: linear-gradient(135deg, #10b981, #002c1d) !important; 
+}
+
+.card-blue {
+    background: linear-gradient(135deg, #3b82f6, #00112c) !important;
+}
+
+.card-yellow {
+    background: linear-gradient(135deg, #f59e0b, #2b1b00) !important;
+}
+
+.card-red {
+    background: linear-gradient(135deg, #ef4444, #2e0000) !important;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card-body p {
+    opacity: 0.8;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+/* --- Live Products Section (Image Cards) --- */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.card-body .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* --- Recent Reports List --- */
+.list-group-item {
+    border-color: #e5e7eb;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.bg-success-subtle {
+    background-color: #d1fae5 !important;
+}
+
+.bg-danger-subtle {
+    background-color: #fee2e2 !important;
+}
+
+/* --- Product Table --- */
+.table-responsive {
+    border-radius: var(--border-radius);
+    /* overflow: hidden; Ensures table corners are rounded */
+}
+
+.table {
+    --bs-table-bg: white;
+    --bs-table-hover-bg: #f8fafc;
+}
+
+.table thead th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+/* Badges for Status/Results */
+/* Badge Styles */
+.badge {
+  padding: 2.5px 5px !important;
+  font-size: 0.7rem;
+  font-weight: 500;
+  min-width: 80px;
+  border: 1px solid beige !important; /* Optional: adds definition */
+  text-transform: capitalize;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+/* Status Badge Variants - Improved Contrast */
+.badge-pending {
+  color: orange !important; /* Darker yellow for better contrast */
+  background-color: #ffffbc !important; /* Lighter yellow background */
+}
+
+.badge-tested {
+  color: #0d3b0d !important; /* Darker green text */
+  background-color: #c8ffc8 !important; /* Slightly darker green for better contrast */
+}
+
+/* Results */
+.badge-pass,
+.badge-active {
+  color: #0d3b0d !important; /* Darker green text */
+  background-color: #c8ffc8 !important; /* Slightly darker green for better contrast */
+}
+
+.badge-fail,
+.badge-banned {
+  color: #5c0000 !important; /* Darker red text */
+  background-color: #ffc7c7 !important; /* Lighter red background for better contrast */
+}
+/* --- Notifications Modal --- */
+
+.modal-header{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+#notifModal .modal-dialog-end {
+    margin-right: 0;
+    margin-top: 0;
+    height: 100%;
+}
+
+.bi-bell-fill{
+    color: var(--primary) !important; 
+}
+
+@media (min-width: 576px) {
+    #notifModal .modal-dialog-end {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(0, 0) !important;
+        width: 350px;
+        height: 100%;
+    }
+
+    #notifModal .modal-content {
+        height: 100%;
+    }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1199px) {
+    /* Large tablets and up - keep sidebar visible */
+    #content {
+        padding-left: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile - adjust padding for better screen use */
+
+    #sidebar.active {
+        left: 0;
+    }
+
+    .list-group-item {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .list-group-item > div:first-child {
+        margin-bottom: 5px;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+
+li a{
+    text-decoration: none !important;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1199px) {
+    /* Large tablets and up - keep sidebar visible */
+    #content {
+        padding-left: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Tablets and smaller - sidebar starts collapsed */
+    #sidebar {
+        width: 250px;
+        left: 0;
+        margin-left: -250px; /* Completely hidden by default */
+    }
+
+    #sidebar.active,
+    #sidebar.toggled {
+        margin-left: 0; /* Show when active/toggled */
+    }
+
+    #content {
+        padding-left: 0; /* No padding when sidebar is hidden */
+    }
+
+    #content.active,
+    #content.toggled {
+        padding-left: 0;
+    }
+
+    /* When sidebar is open, add overlay to content */
+    #sidebar.active + #content::before,
+    #sidebar.toggled + #content::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1029;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile - sidebar takes full width */
+    #sidebar {
+        width: 100%;
+        margin-left: -100%; /* Completely hidden by default */
+    }
+
+    #sidebar.active,
+    #sidebar.toggled {
+        margin-left: 0; /* Show full screen when active/toggled */
+    }
+
+    #content {
+        padding-left: 0;
+    }
+
+    #content.active,
+    #content.toggled {
+        padding-left: 0;
+    }
+
+    .list-group-item {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .list-group-item > div:first-child {
+        margin-bottom: 5px;
+    }
+}
+
+.ijon{
+    background-image: url('../images/logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 105px;
+}

@@ -1,0 +1,31 @@
+<!-- ALL ACCESSIBLE FILES -->
+
+<!-- USERS -->
+http://localhost/lab/users/login.php
+http://localhost/lab/users/profile.php
+http://localhost/lab/users/register.php
+
+<!-- PRODUCTS -->
+http://localhost/lab/products/add_product.php
+http://localhost/lab/products/edit_product.php
+http://localhost/lab/products/list_products.php
+
+<!-- REPORTS -->
+http://localhost/lab/reports/add_report.php
+http://localhost/lab/reports/edit_report.php
+http://localhost/lab/reports/reports.php
+
+<!-- DASHBOARD -->
+http://localhost/lab/dashboard/admin.php
+http://localhost/lab/dashboard/tester.php
+http://localhost/lab/dashboard/analyst.php
+http://localhost/lab/dashboard/supplier.php
+http://localhost/lab/dashboard/users.php
+
+<!-- XTRAS -->
+http://localhost/lab/xtras/adminhead.php
+http://localhost/lab/xtras/testerhead.php
+http://localhost/lab/xtras/supplierhead.php
+http://localhost/lab/xtras/analysthead.php
+
+

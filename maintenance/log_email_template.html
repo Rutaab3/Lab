@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Log Report</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4;">
+    
+    <!-- Container -->
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4; padding: 20px 0;">
+        <tr>
+            <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    
+                    <!-- Hero Image -->
+                    <tr>
+                        <td>
+                            <img src="../images/logo22.png" alt="Activity Log Report" style="width: 100%; height: auto; display: block;">
+                        </td>
+                    </tr>
+                    
+                    <!-- Header -->
+                    <tr>
+                        <td style="padding: 30px 40px 10px;">
+                            <h1 style="margin: 0; color: #000000; font-size: 28px; font-weight: 600;">Activity Log Report</h1>
+                            <p style="margin: 5px 0 0; color: #555555; font-size: 15px;">{{DATE}}</p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Message -->
+                    <tr>
+                        <td style="padding: 10px 40px 20px; color: #555555; font-size: 15px; line-height: 24px;">
+                            <p style="margin: 0 0 15px;">Here is the summary of recent activities logged in your system.</p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Log Table -->
+                    <tr>
+                        <td style="padding: 0 40px 30px;">
+                            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f8f8; border-radius: 6px; border-left: 4px solid #000000; overflow: hidden;">
+                                <tr>
+                                    <td style="padding: 20px;">
+                                        
+                                        <!-- Logo Header -->
+                                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+                                            <tr>
+                                                <td align="left">
+                                                    <img src="../images/logo.png" alt="Lab Automation" style="height: 30px; width: auto; vertical-align: middle;">
+                                                    <span style="font-size: 16px; font-weight: 600; color: #000; margin-left: 10px; vertical-align: middle;">Lab Automation</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <!-- The Logs -->
+                                        <div style="background-color: #ffffff; border-radius: 4px; padding: 0;">
+                                            <table width="100%" cellpadding="10" cellspacing="0" style="font-size: 13px; border-collapse: collapse;">
+                                                <thead>
+                                                    <tr style="background-color: #eee; border-bottom: 2px solid #ddd;">
+                                                        <th style="text-align: left; color: #333;">Time</th>
+                                                        <th style="text-align: left; color: #333;">Action</th>
+                                                        <th style="text-align: left; color: #333;">Details</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {{LOG_ROWS}}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- CTA Button -->
+                    <tr>
+                        <td align="center" style="padding-bottom: 30px;">
+                            <a href="{{DASHBOARD_URL}}" style="display: inline-block; background-color: #000000; color: #ffffff; text-decoration: none; padding: 14px 35px; border-radius: 4px; font-size: 15px; font-weight: 600; text-align: center;">
+                                View Dashboard
+                            </a>
+                        </td>
+                    </tr>
+                    
+                    <!-- Social Links -->
+                    <tr>
+                        <td style="padding: 20px 40px; border-top: 1px solid #eeeeee;">
+                            <p style="margin: 0 0 15px; color: #666666; font-size: 14px; text-align: center;">System Notification</p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #000000; color: #ffffff; padding: 30px 40px;">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="text-align: center; font-size: 11px; color: #888888;">
+                                        <p style="margin: 0;">© 2025 Lab Automation. All rights reserved.</p>
+                                        <p style="margin: 5px 0 0;">This report was generated automatically. Please do not reply.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>

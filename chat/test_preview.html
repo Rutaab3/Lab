@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Preview Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="chat.css">
+    <style>
+        body {
+            padding: 20px;
+            background: #f0f4f8;
+        }
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h3>File Preview Test</h3>
+        <p class="text-muted">Test file upload preview functionality</p>
+        
+        <div class="chat-input">
+            <form id="messageForm">
+                <div class="input-group">
+                    <label for="fileInput" class="btn btn-outline-secondary" title="Attach file">
+                        <i class="bi bi-paperclip"></i>
+                    </label>
+                    <input type="file" id="fileInput" name="file" style="display: none;">
+                    <input type="text" class="form-control" id="messageInput" placeholder="Type a message...">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+                </div>
+                <div id="filePreview" style="display: none;">
+                    <!-- File preview will be dynamically inserted here -->
+                </div>
+            </form>
+        </div>
+
+        <hr class="my-4">
+
+        <h5>Sample Message Preview (After Sending)</h5>
+        <div class="message sent">
+            <img src="../uploads/users/default.png" alt="User" class="message-avatar">
+            <div class="message-content">
+                <div class="message-text">Check out this image!</div>
+                <div class="message-file-preview">
+                    <a href="#" target="_blank">
+                        <img src="https://via.placeholder.com/300x200" alt="sample.jpg" class="message-image-preview">
+                    </a>
+                    <div class="file-info">
+                        <small>sample.jpg</small>
+                    </div>
+                </div>
+                <div class="message-time">2:30 PM</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log('Test page loaded');
+
+        // File Handling Functions
+        function handleFileSelect(e) {
+            console.log('File selected!', e);
+            const file = e.target.files[0];
+            if (file) {
+                console.log('File details:', file.name, file.type, file.size);
+                const filePreviewDiv = document.getElementById('filePreview');
+                const fileType = file.type;
+                
+                // Clear previous preview
+                filePreviewDiv.innerHTML = '';
+                
+                // Create preview based on file type
+                let previewHtml = '';
+                
+                // Image preview
+                if (fileType.startsWith('image/')) {
+                    console.log('Creating image preview...');
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        console.log('Image loaded');
+                        previewHtml = `
+                            <div class="file-preview-container">
+                                <div class="file-preview-image">
+                                    <img src="${event.target.result}" alt="${file.name}">
+                                </div>
+                                <div class="file-preview-info">
+                                    <span class="file-preview-name">${file.name}</span>
+                                    <span class="file-preview-size">${formatFileSize(file.size)}</span>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-danger file-preview-remove" id="removeFile">
+                                    <i class="bi bi-x"></i>
+                                </button>
+                            </div>
+                        `;
+                        filePreviewDiv.innerHTML = previewHtml;
+                        filePreviewDiv.style.display = 'block';
+                        console.log('Preview should be visible now');
+                    };
+                    reader.readAsDataURL(file);
+                }
+                // PDF preview
+                else if (fileType === 'application/pdf') {
+                    console.log('Creating PDF preview...');
+                    previewHtml = `
+                        <div class="file-preview-container">
+                            <div class="file-preview-document">
+                                <i class="bi bi-file-earmark-pdf-fill text-danger"></i>
+                                <span class="file-type-label">PDF</span>
+                            </div>
+                            <div class="file-preview-info">
+                                <span class="file-preview-name">${file.name}</span>
+                                <span class="file-preview-size">${formatFileSize(file.size)}</span>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-danger file-preview-remove" id="removeFile">
+                                <i class="bi bi-x"></i>
+                            </button>
+                        </div>
+                    `;
+                    filePreviewDiv.innerHTML = previewHtml;
+                    filePreviewDiv.style.display = 'block';
+                }
+                // Other files
+                else {
+                    console.log('Creating generic file preview...');
+                    previewHtml = `
+                        <div class="file-preview-container">
+                            <div class="file-preview-document">
+                                <i class="bi bi-file-earmark-fill text-secondary"></i>
+                                <span class="file-type-label">FILE</span>
+                            </div>
+                            <div class="file-preview-info">
+                                <span class="file-preview-name">${file.name}</span>
+                                <span class="file-preview-size">${formatFileSize(file.size)}</span>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-danger file-preview-remove" id="removeFile">
+                                <i class="bi bi-x"></i>
+                            </button>
+                        </div>
+                    `;
+                    filePreviewDiv.innerHTML = previewHtml;
+                    filePreviewDiv.style.display = 'block';
+                }
+            }
+        }
+
+        function removeFile() {
+            console.log('Removing file...');
+            document.getElementById('fileInput').value = '';
+            document.getElementById('filePreview').style.display = 'none';
+            document.getElementById('filePreview').innerHTML = '';
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+        }
+
+        // Setup event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, setting up listeners...');
+            
+            const fileInput = document.getElementById('fileInput');
+            if (fileInput) {
+                console.log('File input found, adding listener');
+                fileInput.addEventListener('change', handleFileSelect);
+            } else {
+                console.error('File input not found!');
+            }
+            
+            // Event delegation for remove button
+            const filePreview = document.getElementById('filePreview');
+            if (filePreview) {
+                filePreview.addEventListener('click', function(e) {
+                    if (e.target.closest('.file-preview-remove') || e.target.closest('#removeFile')) {
+                        removeFile();
+                    }
+                });
+            }
+
+            // Prevent form submission
+            document.getElementById('messageForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                console.log('Form submitted (prevented)');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,421 @@
+:root {
+  --text: #000000;
+  --background: #edede9;
+  --secondary: #f8fafc;
+  --primary: #6366f1;
+  --border: transparent;
+  --input: #ffffff;
+  --accent: #4f46e5;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    width: 100%;
+    height: 80vh;
+}
+body {
+  background-color: var(--background) !important;
+  color: var(--text);
+  font-family: "Inter", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+      min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.main {
+  flex-direction: column;
+  white-space: nowrap;
+       padding: 20px;
+      background: var(--background);
+  border: 1px solid transparent;
+  backdrop-filter: blur(5px);
+    margin: 0px !important;
+    border-radius: 15px;
+
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Table */
+.table-custom {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--secondary);
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+
+
+
+}
+
+.table-custom thead {
+  background: var(--primary);
+  color: var(--background);
+  border-radius: 5px !important;
+  border: 1px solid transparent !important;
+
+
+}
+
+.table-custom thead th {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 12px;
+  color: var(--background);
+  border: 1px solid transparent !important;
+
+
+}
+
+.table-custom tbody {
+  background-color: var(--secondary) !important;
+  padding: 10px;
+  text-align: center;
+    margin-bottom: 1px solid var(--accent) !important;
+
+  font-size: 14px;
+  border-radius: 5px !important;
+  border: 1px solid transparent !important;
+
+}
+
+.table-custom tbody td {
+  background-color: var(--secondary) !important;
+  padding: 10px;
+  color: var(--text);
+  text-align: center;
+  border-radius: 0px !important;
+  margin-bottom: 1px solid var(--accent) !important;
+  font-size: 14px;
+  border: 1px solid transparent !important;
+
+}
+
+.table-custom img {
+  background-color: transparent!important;
+  color: var(--text);
+  border: 1px solid transparent !important;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50px !important;
+
+}
+
+.input-container {
+  position: relative;
+}
+
+.form_control {
+  width: 100%;
+  padding: 6px 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 5px;
+  background: white;
+  font-size: 1rem;
+  transition: var(--transition);
+  outline: none;
+}
+
+.form_control:focus {
+  border-color: var(--primary-color);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  transform: translateY(-2px);
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  transition: var(--transition);
+  pointer-events: none;
+  background: white;
+  padding: 0 0.5rem;
+}
+
+.input-container input:focus+label,
+.input-container input:not(:placeholder-shown)+label {
+  top: 0;
+  font-size: 0.875rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* File Input Styling */
+input[type="file"] {
+  padding: 1rem;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  background: #f8fafc;
+  transition: var(--transition);
+  width: 100%;
+}
+
+input[type="file"]:hover {
+  border-color: var(--primary-color);
+  background: white;
+}
+
+input[type="file"]::file-selector-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-right: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Badge Styles */
+.badge-status,
+.badge-result,
+.badge-user {
+  padding: 2.5px 5px !important;
+  font-size: 0.8rem;
+  font-weight: 500;
+  min-width: 80px;
+  border: 1px solid beige !important; /* Optional: adds definition */
+  text-transform: capitalize;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+/* Status Badge Variants - Improved Contrast */
+.badge-pending {
+  color: #000000 !important;
+  background-color: #ffffbc !important; 
+}
+
+.badge-tested {
+  color: #0d3b0d !important; 
+  background-color: #c8ffc8 !important; 
+}
+
+/* Results */
+.badge-passed,
+.badge-active {
+  color: #0d3b0d !important;
+  background-color: #c8ffc8 !important;
+}
+
+.badge-failed,
+.badge-banned {
+  color: #5c0000 !important; 
+  background-color: #ffc7c7 !important;
+}
+
+
+/* Buttons */
+.btn-custom {
+  border: 1px solid var(--accent);
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 6px 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  display: inline-block;
+  /* ← this enables padding, transform, animation */
+  text-decoration: none;
+  /* removes underline for <a> */
+  border-radius: 4px;
+  /* optional: makes it smoother */
+  cursor: pointer;
+}
+
+.btn-custom:hover {
+  background: var(--accent);
+  color: var(--background);
+  animation: swingX 0.8s ease-in-out;
+}
+
+
+.btn-delete,
+.btn-update,
+.btn-view,
+.btn-test{
+  padding: 3px 7px;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 2px;
+  text-transform: uppercase;
+  border: 0.5px solid var(--primary) !important;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  display: inline-block;
+  /* ← this enables padding, transform, animation */
+  text-decoration: none;
+  /* removes underline for <a> */
+  border-radius: 4px;
+  /* optional: makes it smoother */
+  cursor: pointer;
+}
+.btn-update {
+  background-color: white;
+  color: green;
+}
+
+.btn-update:hover {
+  background: green;
+  color: white;
+  animation: swingX 0.8s ease-in-out;
+}
+
+.btn-delete {
+  background-color: white;
+  color: red;
+}
+
+.btn-delete:hover {
+  background: red;
+  color: white;
+  animation: swingX 0.8s ease-in-out;
+}
+
+.btn-view {
+  background-color: white;
+  color: #009da8;
+}
+
+.btn-view:hover {
+  background: #009da8;
+  color: white;
+  animation: swingX 0.8s ease-in-out;
+}
+
+.btn-test {
+  background-color: white;
+  color: #9b00d8;
+}
+
+.btn-test:hover {
+  background: #9b00d8;
+  color: white;
+  animation: swingX 0.8s ease-in-out;
+}
+
+@keyframes swingX {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(2px);
+  }
+
+  40% {
+    transform: translateX(-2px);
+  }
+
+  60% {
+    transform: translateX(2px);
+  }
+
+  80% {
+    transform: translateX(-2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+
+
+
+/* Alert Messages */
+.alert {
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+/* Alert Messages */
+.alert {
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 1rem 1.5rem !important;
+  margin-bottom: 2rem !important;
+  font-weight: 500 !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: var(--transition) !important;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #d4edda, #c3e6cb) !important;
+  color: #155724 !important;
+  border-left: 4px solid #28a745 !important;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb) !important;
+  color: #721c24 !important;
+  border-left: 4px solid #dc3545 !important;
+}
+
+.alert.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+li a{
+    text-decoration: none !important;
+}
